@@ -1,27 +1,36 @@
-import { Text, SafeAreaView, StyleSheet } from 'react-native';
+import { Text, SafeAreaView, StyleSheet, View } from 'react-native';
 
-// You can import supported modules from npm
-import Calculadora from './components/Calculadora'
+import Botao from "./src/components/Botao";
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Oi</Text>
+    <SafeAreaView style={estilos.container}>
+      <View style={estilos.botoes}>
+      <Botao label ="7"/>
+      <Botao label ="8"/>
+      <Botao label ="9"/>
+      <Botao label ="*"/>
+      <Botao label ="4"/>
+      <Botao label ="5"/>
+      <Botao label ="6"/>
+      <Botao label ="-"/>
+      <Botao label ="1"/>
+      <Botao label ="2"/>
+      <Botao label ="3"/>
+      <Botao label ="+"/>
+      </View>
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
+const estilos = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
+    justifyContent: 'center'
   },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
+  botoes: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    backgroundColor: "#900"
+  }
 });
