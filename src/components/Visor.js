@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native"
 export default props => {
     return(
         <View style={estilos.visor}>
-        <Text style={estilos.valorVisor}>10</Text>
+        <Text style={estilos.valorVisor} numberOfLines={1}>{props.valor}</Text>
         </View>
     )
 }
@@ -18,6 +18,8 @@ const estilos = StyleSheet.create({
     },
     valorVisor: {
         fontSize: 60,
-        color: "#fff"
+        color: "#fff",
+        paddingTop: 150,
+        paddingRight: 10
     }
 })
